@@ -1,0 +1,24 @@
+{
+    "currencies": [
+      {
+        "code": "USD",
+        "symbol": "$",
+        "minimum-amount": 0.50
+      },
+      {
+        "code": "EUR",
+        "symbol": "€",
+        "minimum-amount": 0.50
+      },
+      {
+        "code": "ZAR",
+        "symbol": "R",
+        "minimum-amount": 5.00
+      },
+      {
+        "code": "GBP",
+        "symbol": "£",
+        "minimum-amount": 0.50
+      }
+    ]
+  }

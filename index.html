@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ImReallyGift</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script src="controlroom.js"></script>
+
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Logo For The Site -->
+  <a class="logo-link" href="index.html">
+    <span class="text-logo">GIFT</span>
+  </a>
+
+  <!-- Night mode/Light mode icon -->
+<button id="theme-toggle" class="theme-icon-toggle">
+    <img id="theme-icon" src="assets/icons/moon-regular.svg" fill="#fff" alt="Theme Icon" />
+  </button>
+    
+
+  <main>
+    <!-- Image Switcher -->
+    <div class="banner-showcase">
+      <p class="banner-note1">CREATOR PAGE BY</p>
+      <p class="banner-note2">GIFT</p>  
+      <img src="assets/imgs/removed background - 25 Dec 2020.png" alt="Banner Showcase">
+    </div>
+
+    <!-- Support Amount Container -->
+    <div class="support-box">
+        <p class="box-heading">AMOUNT SECTION</p>
+        <div class="notes-box">
+            <p class="notes-box-heading">IMPORTANT NOTES</p>
+            <p class="note1">>Amounts will be viewed in your chosen currency, but will be processed in Rands due to the payment processor being used.</p>
+            <p class="note1">>To switch between the four currencies available, tap on the currency tab within the amount input field.</p>
+            <p class="note1">>There is a minimum amount threshold for all currencies due to the payment processor being used.</p>
+            <p class="note1">>To anyone deciding to help out me as a creator with whatever given. Thank You.</p>
+        </div>
+
+            <div class="amount-box">
+                <p class="amount-box-heading">AMOUNTS</p>
+                <div class="donation-container">
+                    <!-- Buttons will be auto-inserted here by JavaScript -->
+                </div>
+
+                <!-- Minimum threshold amount text -->
+                <p class="min-amount-warning"></p>
+
+                <!-- Donation input -->
+                  <div class="donation-input">
+                    <select class="currency-select">
+                      <option value="USD">$ USD</option>
+                      <option value="EUR">€ EUR</option>
+                      <option value="ZAR">R ZAR</option>
+                      <option value="GBP">£ GBP</option>
+                      <!-- Add your saved currencies here -->
+                    </select>
+                    <input type="number" class="amount-input" placeholder="Enter Amount" />
+                </div>
+<!-- Payfast Form -->
+<form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
+    <input required type="hidden" name="cmd" value="_paynow">
+    <input required type="hidden" name="receiver" pattern="[0-9]" value="26688891">
+    <input type="hidden" name="return_url" value="https://www.midiaplay.online/install.html">
+    <input type="hidden" name="cancel_url" value="https://www.midiaplay.online">
+    <table>
+    <tr>
+    <td><label id="PayFastAmountLabel" for="PayFastAmount" style="display: none;">Amount: </label></td>
+
+    </tr>
+    </table>
+    <td><input required id="PayFastAmount" type="number" step=".01" name="amount" min="5.00" placeholder="5.00" value="5.00" class="payfast-input-container"></td>   
+    <input required type="hidden" name="item_name" maxlength="255" value="Music Beat Purchase">
+    <input type="hidden" name="item_description" maxlength="255" value="Payment Processor">
+    <!-- Your custom button here -->
+    <button type="submit" class="confirm-button">
+        <p class="confirm-button-text">CONTINUE</p>
+    </button>
+    </form>
+                <p class="one-time-description">ONLY ONE-TIME PAYMENTS. NO MONTHLY PAYMENTS.</p>           
+
+
+        </div>
+    </div>
+
+    <!-- 1st Heading -->
+    <p class="note2">EVERY SUPPORT COUNTS. THANK YOU!</p>
+
+
+    </div>
+</main>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
+    
+        const icons = {
+            light: 'assets/icons/moon-regular.svg',
+            dark: 'assets/icons/sun-regular.svg'
+        };
+    
+        const getPreferredTheme = () => {
+            return localStorage.getItem('theme') ||
+                   (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        };
+    
+        const applyTheme = (theme) => {
+            html.setAttribute('data-theme', theme);
+            themeIcon.src = icons[theme];
+            localStorage.setItem('theme', theme);
+        };
+    
+        // Initial theme setup
+        applyTheme(getPreferredTheme());
+    
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            void html.offsetWidth; // Force reflow for smooth transition if needed
+            applyTheme(newTheme);
+        });
+    });
+    </script>
+    
+
+</body>
+</html>
