@@ -182,14 +182,14 @@ html[data-theme="dark"] #theme-icon {
 
 .banner-showcase img { 
     position: relative; 
-    filter: grayscale(5%);  
+    filter: grayscale(5%);
     opacity: 100%;
-    width: 30%;
+    width: 20%;
     max-height: 100%;
     border-radius: 10px;
     object-fit: cover;
-    right: -60vw !important;
-    top: -1.6vw none;
+    right: -61vw !important;
+    top: 2.6vw;
     image-resolution: 1080p none;
     user-select: none;
 }
