@@ -8,11 +8,12 @@
 :root {
     --primary-color: #0a061a;
     --hover-color: #1b1145;
-    --accent-color: #5315ff;
+    --accent-color: #9215ff;
     --text-color: #f1e9fd;
-    --ui-mode-color: #380fad;
+    --ui-mode-color: #9215ff;
     --gradient-color: #0a061a;
     --banner-gradient-color: #0a061a8a;
+    --amountinputfield-color: #b515ff54;
     
     /* Transition properties */
     --transition-duration: 6s;
@@ -21,12 +22,13 @@
   
   /* Light mode variables */
   [data-theme="light"] {
-    --primary-color: #ebdeff;
+    --primary-color: #fbf3ff;
     --hover-color: #d5c4f5d6;
     --text-color: #0a061a;
-    --ui-mode-color: #c0a6ff;
+    --ui-mode-color: #ce6afc;
     --gradient-color: #ebdeff;
     --banner-gradient-color: #ebdeff;
+    --amountinputfield-color: #b515ff52;
   }
   
   * {
@@ -428,7 +430,7 @@ html[data-theme="dark"] #theme-icon {
     border: none;
     padding: 10px;
     font-size: 1rem;
-    background-color: transparent;
+    background-color: var(--amountinputfield-color);
     outline: none;
     color: var(--text-color);
     text-align: center none;
