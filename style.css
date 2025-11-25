@@ -6,14 +6,14 @@
     font-style: normal;
 }
 :root {
-    --primary-color: #0a061a;
-    --hover-color: #1b1145;
+    --primary-color: #161313;
+    --hover-color: #451111;
     --accent-color: #9215ff;
     --text-color: #f1e9fd;
-    --ui-mode-color: #9215ff;
+    --ui-mode-color: #ff2626;
     --gradient-color: #0a061a;
     --banner-gradient-color: #0a061a8a;
-    --amountinputfield-color: #b515ff54;
+    --amountinputfield-color: #ff151d54;
     
     /* Transition properties */
     --transition-duration: 6s;
@@ -22,13 +22,13 @@
   
   /* Light mode variables */
   [data-theme="light"] {
-    --primary-color: #fbf3ff;
-    --hover-color: #d5c4f5d6;
-    --text-color: #0a061a;
-    --ui-mode-color: #ce6afc;
+    --primary-color: #e8e7e3;
+    --hover-color: #f5c4c4d6;
+    --text-color: #1a0606;
+    --ui-mode-color: #ff2626;
     --gradient-color: #ebdeff;
     --banner-gradient-color: #ebdeff;
-    --amountinputfield-color: #b515ff52;
+    --amountinputfield-color: #ff151552;
   }
   
   * {
@@ -141,7 +141,7 @@
     border: none;
     border-radius: 50%;
     width: 1.3rem;
-    height: 1.3rem;
+    height: 2.3rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -166,6 +166,9 @@ html[data-theme="dark"] #theme-icon {
   }
 
 @media (max-width: 700px) {
+  .text-logo{
+    font-size: 2vw;
+  }
     .theme-icon-toggle{
       right: 1.3rem;
     }
@@ -223,7 +226,18 @@ html[data-theme="dark"] #theme-icon {
     right: 69vw;
     user-select: none;
 }
-
+.banner-note3 {
+  font-size: 2.6vw;
+  font-weight: bold;
+  position: absolute;
+  color: var(--ui-mode-color);
+  font-family: 'Winds', sans-serif;
+  background-color: #1d9cb9 none;
+  top: 16.9vw !important;
+  right: 58.4vw;
+  font-style: italic;
+  user-select: none;    
+}
 .support-box {
     background-color: #5315ff46 none;
     width: 1fr;
@@ -238,22 +252,7 @@ html[data-theme="dark"] #theme-icon {
     flex-wrap: wrap; /* Allow wrapping on small screens */
     gap: 0.6vw; /* Spacing between boxes */
 }
-.box-heading {
-    color: var(--text-color);
-    margin: 0.2em none;
-    margin-top: 0.35em none;
-    font-weight: bold;
-    font-size: 1.8vw;
-    margin-left: -4vw none;
-    background-color: #272832 none;
-    width: none;
-    display: flex none;
-    text-align: center none;
-    justify-content: center none;
-    text-decoration: underline;
-    opacity: 100%;
-    user-select: none;
-}
+
 .notes-box {
     background-color: #5315ff46 none;
 
@@ -270,6 +269,7 @@ html[data-theme="dark"] #theme-icon {
 }
 .notes-box-heading {
     color: var(--text-color);
+    text-decoration: underline;
     margin: 0.2em none;
     margin-top: 0.35em none;
     font-weight: bold;
@@ -292,7 +292,6 @@ html[data-theme="dark"] #theme-icon {
     min-width: 38.8vw; /* Default width for desktop */
 
     width: 38.8vw none;
-    height: auto;
     border-radius: 10px;
     margin: 0.3rem none;
     margin-top: -16vw none;
@@ -309,13 +308,6 @@ html[data-theme="dark"] #theme-icon {
             min-width: 100%;
         }
 
-        .donation-container {
-            grid-template-columns: repeat(2, 1fr) none;
-            max-width: 100% none;
-        }
-        .donation-amount {
-            height: 3vh;
-        }
 
         /* Fix confirm button position */
         .confirm-button {
@@ -336,6 +328,7 @@ html[data-theme="dark"] #theme-icon {
     }
 .amount-box-heading {
         color: var(--text-color);
+        text-decoration: underline 2px solid var(--text-color);
         margin: 0.2em none;
         margin-top: 0.35em none;
         font-weight: bold;
@@ -352,8 +345,7 @@ html[data-theme="dark"] #theme-icon {
     grid-template-columns: repeat(3, 1fr); /* 3 buttons per row */
     gap: 0.6vw; /* Spacing between buttons */
     max-width: 550px; /* Adjust container width as needed */
-    height: auto;
-    margin: 0 auto; /* Center the container */
+    margin: 1.5vw; /* Center the container */
     background-color: #1d9cb9 none;
     justify-content: center;
   }
@@ -361,7 +353,7 @@ html[data-theme="dark"] #theme-icon {
   .donation-amount {
     padding: 12px 0 none;
     justify-content: center none;
-    font-size: 16px;
+    font-size: 12px;
     text-align: center;
     font-weight: bold;
     background: var(--ui-mode-color);
@@ -375,9 +367,15 @@ html[data-theme="dark"] #theme-icon {
     color: var(--text-color);
     user-select: none;
   }
+  
 @media (max-width: 700px) {
+.donation-container {
+  margin: 5vw; /* Center the container */
+}
+
 .donation-amount {
-    height: 3vh;
+  display: flex none;
+    height: 7vw !important;
     }
 }
   
@@ -392,12 +390,12 @@ html[data-theme="dark"] #theme-icon {
 .donation-input {
     display: flex;
     align-items: center;
-    background-color: #5315ff47; /* soft purple background */
+    background-color: #ff152547 none; /* soft purple background */
     border-radius: 0.7vw;
     border: none;
     overflow: hidden;
-    width: 1vw none;
-    max-width: 35.68vw;
+    width: 35.68vw;
+    max-width: 35.68vw none;
     height: 2.45vw;
     margin: 1rem auto;
     box-shadow: 0 0.3vw 0.5vw rgba(0, 0, 0, 0.50) none;
@@ -405,14 +403,14 @@ html[data-theme="dark"] #theme-icon {
 }
 @media (max-width: 700px) {
 .donation-input {
-    max-width: 62.58vw;
+    width: 95vw;
     height: 5.5vw;
     text-align: center none;
     }
 }
       
 .currency-select {
-    border: 0.5px solid #5315ff11;
+    border: 0.5px solid #ff151511;
     background-color: var(--ui-mode-color);
     color: var(--text-color);
     font-weight: bold;
@@ -424,6 +422,94 @@ html[data-theme="dark"] #theme-icon {
 .conversion-info {
     display: none;
 }
+/* Username Section */
+.username-box-heading {
+        color: var(--text-color);
+        margin: -0.5rem;
+        margin-top: 0.8em;
+        font-weight: 500;
+        font-size: 0.6rem;
+        background-color: #2a9a1c none;
+        width: none;
+        text-align: center;
+        opacity: 100%;
+        user-select: none;
+        margin-left: 1.6vw none;
+        display: none;
+}
+.username-input {
+  display: flex;
+  outline: none;
+  border: none;
+  text-align: center;
+  border-radius: 0.7vw;
+  color: var(--text-color);
+  background-color: var(--amountinputfield-color);
+  max-width: 35.68vw none;
+  height: 2.45vw;
+  width: 35.68vw;
+  font-size: 1rem;
+  padding: 10px;
+  margin: -0.7rem auto;
+  margin-left: 1.6vw;
+}
+@media (max-width: 700px) {
+.username-input {
+    display: flex;
+    width: 95vw;
+    height: 5.5vw none;
+    text-align: center none;
+    }
+}
+/* Message Section */
+.message-box-heading {
+        color: var(--text-color);
+        margin: -0.5rem;
+        margin-top: -0.3vw;
+        font-weight: 500;
+        font-size: 0.6rem;
+        background-color: #2a9a1c none;
+        width: none;
+        text-align: center;
+        opacity: 100%;
+        user-select: none;
+        margin-left: 1.6vw none;
+        display: none;
+}
+.message-input {
+  display: flex;
+  outline: none;
+  border: none;
+  border-radius: 0.7vw;
+  text-align: center none;
+  color: var(--text-color);
+  background-color: var(--amountinputfield-color);
+  max-width: 35.68vw none;
+  min-height: auto;
+  width: 35.68vw;
+  font-size: 1rem;
+  padding: 10px;
+  margin: 1.2rem auto;
+  margin-left: 1.6vw;
+}
+@media (max-width: 700px) {
+.message-box-heading {
+    margin-top: -0.9vw;
+    }
+.message-input {
+    display: flex;
+    width: 95vw;
+    height: 7vw none;
+    max-height: 2vw auto;
+    text-align: center none;
+    }
+}
+/* Hidden Arrows */
+.message-input::-webkit-outer-spin-button,
+.message-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
   
 .amount-input {
     flex: 1;
@@ -434,7 +520,7 @@ html[data-theme="dark"] #theme-icon {
     outline: none;
     color: var(--text-color);
     text-align: center none;
-    width: 120px;
+    width: 120px none;
 }
 
 /* Hidden Arrows */
@@ -465,10 +551,10 @@ html[data-theme="dark"] #theme-icon {
     .confirm-button {
         width: 31vw;
         height: 5.5vw;
-        margin-left: 66vw;
+        margin-left: 34.3vw;
         border-radius: 2vw;
         position: absolute;
-        margin-top: -10.5vw;
+        margin-top: -1.5vw;
     }
     .confirm-button p {
         color: var(--text-color);
@@ -487,7 +573,7 @@ html[data-theme="dark"] #theme-icon {
 @media (max-width: 700px) {
     .one-time-description {
         font-size: 0.45rem;
-        margin-top: -1vw;
+        margin-top: 11vw;
     }
 }
 
@@ -507,7 +593,15 @@ html[data-theme="dark"] #theme-icon {
     transition: all 0.3s ease;
     text-align: center;
     user-select: none;
+    padding-bottom: 1vw;
 }
+
+@media (max-width: 700px) {
+    .min-amount-warning {
+      padding-bottom: 4vw;
+    }
+}
+
 .payfast-input-container {
     display: none;
 }
