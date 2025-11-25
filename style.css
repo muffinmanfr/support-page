@@ -452,6 +452,7 @@ html[data-theme="dark"] #theme-icon {
   padding: 10px;
   margin: -0.7rem auto;
   margin-left: 1.6vw;
+  display: none;
 }
 @media (max-width: 700px) {
 .username-input {
@@ -459,6 +460,7 @@ html[data-theme="dark"] #theme-icon {
     width: 95vw;
     height: 5.5vw none;
     text-align: center none;
+    display: none;
     }
 }
 /* Message Section */
@@ -491,6 +493,7 @@ html[data-theme="dark"] #theme-icon {
   padding: 10px;
   margin: 1.2rem auto;
   margin-left: 1.6vw;
+  display: none;
 }
 @media (max-width: 700px) {
 .message-box-heading {
@@ -502,6 +505,7 @@ html[data-theme="dark"] #theme-icon {
     height: 7vw none;
     max-height: 2vw auto;
     text-align: center none;
+    display: none;
     }
 }
 /* Hidden Arrows */
