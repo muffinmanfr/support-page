@@ -284,6 +284,7 @@ html[data-theme="dark"] #theme-icon {
 .note1 {
     font-size: 1.523vw;
     user-select: none;
+    align-text: center;
 }
 .amount-box {
     background-color: #5315ff46 none;
@@ -608,4 +609,5 @@ html[data-theme="dark"] #theme-icon {
 
 .payfast-input-container {
     display: none;
+
 }
