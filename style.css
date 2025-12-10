@@ -309,6 +309,13 @@ html[data-theme="dark"] #theme-icon {
             min-width: 100%;
         }
 
+        .note1 {
+        font-size: 1.523vw;
+        user-select: none;
+        display: flex;
+        align-text: center;
+        }
+
 
         /* Fix confirm button position */
         .confirm-button {
@@ -611,3 +618,4 @@ html[data-theme="dark"] #theme-icon {
     display: none;
 
 }
+
